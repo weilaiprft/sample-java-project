@@ -20,4 +20,10 @@ steps:
 
 - task: Ant@1
   inputs:
-    buildFile: 'build.xml' 
+    workingDirectory: ''
+    buildFile: 'build.xml'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
